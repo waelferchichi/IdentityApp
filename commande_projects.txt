@@ -1,0 +1,253 @@
+Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
+C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log\20240129_100201
+C:\SQL2022\Express_ENU
+C:\Program Files\Microsoft SQL Server\160\SSEI\Resources
+--------------------------------------------------------------------
+C:\Users\waelf\source\repos\IdentityApp>dotnet new gitignore
+The template "dotnet gitignore file" was created successfully.
+
+C:\Users\waelf\source\repos\IdentityApp>git init
+Initialized empty Git repository in C:/Users/waelf/source/repos/IdentityApp/.git/
+
+C:\Users\waelf\source\repos\IdentityApp>git add .
+C:\Users\waelf\source\repos\IdentityApp>git commit -m "Api project created"
+[master (root-commit) 56f6643] Api project created
+ 8 files changed, 609 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 Api/Api.csproj
+ create mode 100644 Api/Program.cs
+ create mode 100644 Api/Properties/launchSettings.json
+ create mode 100644 Api/appsettings.Development.json
+ create mode 100644 Api/appsettings.json
+ create mode 100644 IdentityApp.sln
+ create mode 100644 commande_projects.txt
+
+C:\Users\waelf\source\repos\IdentityApp>git branch -M main
+
+C:\Users\waelf\source\repos\IdentityApp>git remote add origin https://github.com/waelferchichi/IdentityApp.git
+
+C:\Users\waelf\source\repos\IdentityApp>git push -u origin main
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (12/12), 5.59 KiB | 337.00 KiB/s, done.
+Total 12 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/waelferchichi/IdentityApp.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\waelf\source\repos\IdentityApp>
+
+PowerShell adminsitrateur
+To install SQL Server Management Studio 18.5.1, run the following command from the command line or from PowerShell:
+choco install sql-server-management-studio --version=15.0.18333.0
+To upgrade SQL Server Management Studio 18.5.1, run the following command from the command line or from PowerShell:
+choco upgrade sql-server-management-studio --version=15.0.18333.0
+---------------------------
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA
+---------------------------
+in visual studio search Package manager console
+PM> add-migration AddingUserToDatabase -o Data/Migrations
+Build started...
+Build succeeded.
+To undo this action, use Remove-Migration.
+PM> update-database
+Build started...
+Build succeeded.
+
+---------------------
+SQL Server 2017
+Express Edition 
+Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True
+C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log\20240126_173837
+C:\SQLServer2017Media\Express_ENU
+C:\Program Files\Microsoft SQL Server\140\SSEI\Resources
+--------------------------------------------------------------------
+---------------------
+> Identity App
+-> Account
+--> Register
+--> Login
+
+Postman:
+POST:
+http://localhost:5189/api/account/register
+chosit les 3 parametres body, raw ,json
+
+{
+    "firstName":"Jhon1782",
+    "lastName":"Smith14273",
+    "email":"jsmith123674@example.com",
+    "password":"12345677"
+}
+--------------------------------------------------------------------
+{
+    "firstName":"Wael1234",
+    "lastName":"FERCHICHIi",
+    "email":"waelferchichi1234@example.com",
+    "password":"988192068@#"
+}
+--------------------------------------------------------------------
+{
+    "firstName":"Jhon",
+    "lastName":"Smith",
+    "email":"crazyeights546@gmail.com",
+    "password":"123456"
+}
+--------------------------------------------------------------------
+
+{
+    "firstName":"wael11",
+    "lastName":"ferchichi11",
+    "email":"waelferchichicay2018@gmail.com",
+    "password":"123456"
+}
+
+--------------------------------------------------------------------
+Avertissement de redirection
+ La page que vous consultiez essaie de vous rediriger vers une url non valide (http:///account/confirm-email?token=Q2ZESjhOVm1Ta3N6anRKSWdnVndMNmlUbHhoUTR2dmQ0TUZhTVJueElSM09INTRiZjhzYUdGZXQyWGlBOWVsWC9CVTZyajZ0bGN3VDZ0WlVqLzZjbldrZGNqQnhpRytkcEpSTkwxRTgveVFBcFFhVUtYeFJ6eFlGenM0WGNvVFA1dVpIeVRpTTQ5TlMvQnVHQk1HSXc3ZjgzV3VqTmVZUlloUVJHTm0ySDQzdFU2djMwdytiSFM3R29EN3NTcmN3U3Ryd0Vjb241WHhuZ1pGMDhnMDExMTFqVTBDL2ZZL25hZUFmWHZiQWhtYURWN1BFZk5WZkc5YkJhRFFqMGVERWRVMk1mdz09&email=waelferchichicay2018@gmail.com).
+
+ Si vous ne souhaitez pas consulter cette page, vous pouvez revenir à la page précédente.
+
+--------------------------------------------------------------------
+PUT:
+{{url}}/api/account/confirm-email
+
+{
+    "token":"Q2ZESjhOVm1Ta3N6anRKSWdnVndMNmlUbHhoUTR2dmQ0TUZhTVJueElSM09INTRiZjhzYUdGZXQyWGlBOWVsWC9CVTZyajZ0bGN3VDZ0WlVqLzZjbldrZGNqQnhpRytkcEpSTkwxRTgveVFBcFFhVUtYeFJ6eFlGenM0WGNvVFA1dVpIeVRpTTQ5TlMvQnVHQk1HSXc3ZjgzV3VqTmVZUlloUVJHTm0ySDQzdFU2djMwdytiSFM3R29EN3NTcmN3U3Ryd0Vjb241WHhuZ1pGMDhnMDExMTFqVTBDL2ZZL25hZUFmWHZiQWhtYURWN1BFZk5WZkc5YkJhRFFqMGVERWRVMk1mdz09",
+    "email":"waelferchichicay2018@gmail.com"
+}
+
+affichage:
+{
+    "contentType": null,
+    "serializerSettings": null,
+    "statusCode": null,
+    "value": {
+        "title": "Email confirmed",
+        "message": "Your email address is confirmed. You can login"
+    }
+}
+--------------------------------------------------------------------
+
+-----
+Postman:
+POST:
+http://localhost:5189/api/account/login
+chosit les 3 parametres body, raw ,json
+
+{
+    "firstName":"Wael",
+    "lastName":"FERCHICHI",
+    "email":"waelferchichi@example.com",
+    "password":"98819206@#"
+}
+
+---> reponse aprés send
+{
+    "firstName": "wael",
+    "lastName": "ferchichi",
+    "jwt": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI0NGU4ZWY5NS1mZTVjLTRmZmMtYjI5YS1lMDJlZTY4NTJhZjkiLCJlbWFpbCI6IndhZWxmZXJjaGljaGlAZXhhbXBsZS5jb20iLCJnaXZlbl9uYW1lIjoid2FlbCIsImZhbWlseV9uYW1lIjoiZmVyY2hpY2hpIiwibmJmIjoxNzA2NjAyMTE1LCJleHAiOjE3MDc4OTgxMTUsImlhdCI6MTcwNjYwMjExNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MTg5In0.RGymDAwC-Eej50xmfWutsPFa1-5A64depnBWWe28aYuHt_oqYWM79Sd8e2oKL0ATYp4Q7NKjLfu8jwudqds4lw"
+}
+--------------------------------------------------------------------
+{
+    "username":"jsmith123674@example.com",
+    "password":"12345677"
+}
+----
+Postman:
+GET:
+http://localhost:5189/api/account/refresh-user-token
+Authorization:
+ type : Bearer Token
+ Token :
+eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI0NGU4ZWY5NS1mZTVjLTRmZmMtYjI5YS1lMDJlZTY4NTJhZjkiLCJlbWFpbCI6IndhZWxmZXJjaGljaGlAZXhhbXBsZS5jb20iLCJnaXZlbl9uYW1lIjoid2FlbCIsImZhbWlseV9uYW1lIjoiZmVyY2hpY2hpIiwibmJmIjoxNzA2NjAyMTE1LCJleHAiOjE3MDc4OTgxMTUsImlhdCI6MTcwNjYwMjExNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MTg5In0.RGymDAwC-Eej50xmfWutsPFa1-5A64depnBWWe28aYuHt_oqYWM79Sd8e2oKL0ATYp4Q7NKjLfu8jwudqds4lw
+
+-----
+en utilisant ClaimTypes.Name
+---> reponse aprés send
+System.ArgumentNullException: Value cannot be null. (Parameter 'userName')
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByNameAsync(String userName)
+   at Api.Controllers.AccountController.RefreshUserToken() in C:\Users\waelf\source\repos\IdentityApp\Api\Controllers\AccountController.cs:line 35
+   at lambda_method136(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+HEADERS
+=======
+Accept: */*
+Connection: keep-alive
+Host: localhost:5189
+User-Agent: PostmanRuntime/7.35.0
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI0NGU4ZWY5NS1mZTVjLTRmZmMtYjI5YS1lMDJlZTY4NTJhZjkiLCJlbWFpbCI6IndhZWxmZXJjaGljaGlAZXhhbXBsZS5jb20iLCJnaXZlbl9uYW1lIjoid2FlbCIsImZhbWlseV9uYW1lIjoiZmVyY2hpY2hpIiwibmJmIjoxNzA2NjAyMTE1LCJleHAiOjE3MDc4OTgxMTUsImlhdCI6MTcwNjYwMjExNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MTg5In0.RGymDAwC-Eej50xmfWutsPFa1-5A64depnBWWe28aYuHt_oqYWM79Sd8e2oKL0ATYp4Q7NKjLfu8jwudqds4lw
+Postman-Token: 859e1024-2141-497b-981f-b3445415e3d3
+
+
+-------------------------------
+en utilisant ClaimTypes.Email
+---> reponse aprés send
+{
+    "firstName": "wael",
+    "lastName": "ferchichi",
+    "jwt": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI0NGU4ZWY5NS1mZTVjLTRmZmMtYjI5YS1lMDJlZTY4NTJhZjkiLCJlbWFpbCI6IndhZWxmZXJjaGljaGlAZXhhbXBsZS5jb20iLCJnaXZlbl9uYW1lIjoid2FlbCIsImZhbWlseV9uYW1lIjoiZmVyY2hpY2hpIiwibmJmIjoxNzA2NjAzMDY1LCJleHAiOjE3MDc4OTkwNjUsImlhdCI6MTcwNjYwMzA2NSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MTg5In0.cCfECjoqOKtqy23GweVDCp3gOtnsZQN9Y-KfTg9Y5Px72FSnqE5ushdC5VmpcoCzpYPSSNNYKY89Pn8s0dybBw"
+}
+--------------------------------------------------------------------
+
+click droite > Identity App
+click gauche sur edit
+click gauches sur variables 
+add new variable 
+variable|Initial value | Current value
+ajouter nouvau ligne suivante :
+url|http://localhost:5189|http://localhost:5189
+---------------------------------------
+dans le request Login click sur Tests:
+ajouter deux ligne de code suivantes:
+const user = pm.response.json();
+pm.globals.set('jwt',user.jwt);
+
+
+---> reponse aprés send
+{
+    "firstName": "wael",
+    "lastName": "ferchichi",
+    "jwt": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI0NGU4ZWY5NS1mZTVjLTRmZmMtYjI5YS1lMDJlZTY4NTJhZjkiLCJlbWFpbCI6IndhZWxmZXJjaGljaGlAZXhhbXBsZS5jb20iLCJnaXZlbl9uYW1lIjoid2FlbCIsImZhbWlseV9uYW1lIjoiZmVyY2hpY2hpIiwibmJmIjoxNzA2NjA0NzEzLCJleHAiOjE3MDc5MDA3MTMsImlhdCI6MTcwNjYwNDcxMywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MTg5In0.NrlUF8SBQEaCpj9XLMS9EndGkofWX8DZ2ixd61_2LssKN1pJuFMfPuCUh-9bCerKtsNW1UcIz3RRXos6cthbLA"
+}
+
+---------------------------------------
+dans le request Login click sur refresh user token :
+click sur Authorization:
+remplacer l'ancien  code Token(plus long) par un seul ligne simple:{{jwt}}
+//explication:
+ajouter dans Token le seul ligne suivante:
+Token:
+{{jwt}}
+
+---------------------------------------
+dans le request refresh user token click sur Tests:
+ajouter deux ligne de code suivantes:
+const user = pm.response.json();
+pm.globals.set('jwt',user.jwt);
+
+---------------------------------------
+"MailJet": {
+  "ApiKey": "46f7a42229b5392a68e176b07d558933",
+  "SecretKey": "d7cd51d737b28a442ac41ed20fea0a97"
+}

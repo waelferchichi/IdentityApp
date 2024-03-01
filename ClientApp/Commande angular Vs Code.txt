@@ -1,0 +1,275 @@
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> ng serve -o
+? Would you like to share pseudonymous usage data about this project with the Angular Team
+at Google under Google's Privacy Policy at https://policies.google.com/privacy. For more  
+details and how to change this setting, see https://angular.io/analytics. Yes
+
+Thank you for sharing pseudonymous usage data. Should you change your mind, the following
+command will disable this feature entirely:
+
+    ng analytics disable
+
+Global setting: enabled
+Local setting: enabled 
+Effective status: enabled
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   2.04 MB |
+polyfills.js          | polyfills     | 314.82 kB |
+styles.css, styles.js | styles        | 209.95 kB |
+main.js               | main          |  48.74 kB |
+runtime.js            | runtime       |   6.52 kB |
+
+                      | Initial Total |   2.61 MB
+
+Build at: 2024-01-30T13:50:11.328Z - Hash: 1a3304e0407ba02a - Time: 3002647ms
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+√ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+5 unchanged chunks
+
+Build at: 2024-01-30T13:50:17.906Z - Hash: 1a3304e0407ba02a - Time: 4169ms
+
+√ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime |  6.52 kB |
+main.js             | main    |  5.93 kB |
+
+3 unchanged chunks
+
+Build at: 2024-01-30T16:57:57.905Z - Hash: d80eb28d6b715162 - Time: 2767ms
+
+√ Compiled successfully.
+
+----------------------------
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> ng add ngx-bootstrap@10
+ℹ Using package manager: npm
+✔ Package information loaded.
+
+The package ngx-bootstrap@10 will be installed and executed.
+Would you like to proceed? Yes
+✔ Packages successfully installed.
+    ✅️ Added "bootstrap
+    ✅️ Added "ngx-bootstrap
+UPDATE package.json (1101 bytes)
+UPDATE angular.json (2931 bytes)        
+UPDATE src/app/app.module.ts (502 bytes)
+✔ Packages installed successfully.
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp>  
+-------------------------------------------------------------------------------
+
+PS C:\Users\waelf\source\repos\Identity
+? Would you like to share pseudonymous 
+at Google under Google's Privacy Policy
+details and how to change this setting,
+
+Thank you for sharing pseudonymous usag
+command will disable this feature entir
+
+    ng analytics disable
+
+Global setting: enabled
+Local setting: enabled 
+Effective status: enabled
+✔ Browser application bundle generation
+
+Initial Chunk Files   | Names         |
+vendor.js             | vendor        |
+polyfills.js          | polyfills     |
+styles.css, styles.js | styles        |
+main.js               | main          |
+runtime.js            | runtime       |
+
+                      | Initial Total |
+
+Build at: 2024-01-30T13:50:11.328Z - Ha
+
+** Angular Live Development Server is l
+
+
+√ Compiled successfully.
+✔ Browser application bundle generation
+
+5 unchanged chunks
+
+Build at: 2024-01-30T13:50:17.906Z - Ha
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   | Raw Siz
+runtime.js          | runtime |  6.52 k
+main.js             | main    |  5.93 k
+
+3 unchanged chunks
+
+Build at: 2024-01-30T16:57:57.905Z - Ha
+
+√ Compiled successfully.
+✔ Browser application bundle generation
+
+Initial Chunk Files | Names   | Raw Siz
+runtime.js          | runtime |  6.52 k
+main.js             | main    |  5.93 k
+
+3 unchanged chunks
+
+Build at: 2024-01-30T17:07:43.100Z - Ha
+
+√ Compiled successfully.
+✔ Browser application bundle generation
+
+5 unchanged chunks
+
+Build at: 2024-01-30T17:07:47.382Z - Ha
+
+√ Compiled successfully.
+✔ Browser application bundle generation
+vendor.js           | vendor  |  2.27 M
+runtime.js          | runtime |  6.52 k
+main.js             | main    |  6.27 k
+
+2 unchanged chunks
+
+Build at: 2024-01-30T17:07:50.960Z - Ha
+√ Compiled successfully.
+PS C:\Users\waelf\source\repos\Identity
+PS C:\Users\waelf\source\repos\Identity
+CREATE src/app/shared/shared.module.ts 
+PS C:\Users\waelf\source\repos\Identity
+cd : Cannot find path 'C:\Users\waelf\s
+At line:1 char:1
+ce\repos\IdentityApp\ClientApp\src\app\shared> cd .\componentsalidation-messages --skip-tests
+
+CREATE src/app/shared/components/errors/validation-messages/validation-messages.component.html (34 bytes)
+CREATE src/app/shared/components/errors/validation-messages/validation-meCREATE src/app/shared/components/errors/validation-messages/validation-messages.component.css (0 bytes)
+UPDATE src/app/shared/shared.module.ts (454 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared\compoCREATE src/app/navbar/navbar.component.ts (202 bytes)
+CREATE src/app/account/account.module.ts (193 bytes)
+
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app>
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\account> ng g c register --skip-tests
+CREATE src/app/account/register/register.component.html (23 bytes)
+CREATE src/app/account/register/register.component.ts (210 bytes)
+CREATE src/app/account/register/register.component.css (0 bytes)
+UPDATE src/app/account/account.module.ts (363 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\account>
+----------------------------------------------
+ng serve -o
+cd src/app/shared
+ng g m shared --flat
+cd .\components\
+cd .\errors\
+ng g c not-found --skip-tests
+ng g c validation-messages --skip-tests
+cd ../../../
+ng g c navbar --skip-tests
+ng g c footer --skip-tests
+ng g c home --skip-tests
+ng g m account
+cd .\account\
+ng g m account-routing --flat
+ng g s account --skip-tests
+ng g c login --skip-tests
+ng g c register --skip-tests
+-------------------------
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\account> cd ..    
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app> ng g c paly --skip-tests
+CREATE src/app/paly/paly.component.html (19 bytes)
+CREATE src/app/paly/paly.component.ts (194 bytes)
+CREATE src/app/paly/paly.component.css (0 bytes)
+UPDATE src/app/app.module.ts (887 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app> 
+-------------------------
+
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> npm i bootswatch
+
+added 1 package, removed 1 package, and audited 973 packages in 42s
+
+111 packages are looking for funding
+  run `npm fund` for details        
+
+found 0 vulnerabilities
+------------------------------
+visit site web https://angular.io/guide/build
+copy commande angular dans commande cmd:
+ng generate environments
+dans vs code coller cette commande dans terminal:
+
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app> cd ../../
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> ng generate environments
+CREATE src/environments/environment.ts (31 bytes)
+CREATE src/environments/environment.development.ts (31 bytes)
+UPDATE angular.json (3227 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> 
+-----------------------------------------------------------
+
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> cd .\src\app\shared\components\modals\
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared\components\modals> ng g c notification --skip-tests
+CREATE src/app/shared/components/modals/notification/notification.component.html (27 bytes)
+CREATE src/app/shared/components/modals/notification/notification.component.ts (226 bytes)
+CREATE src/app/shared/components/modals/notification/notification.component.css (0 bytes) 
+UPDATE src/app/shared/shared.module.ts (914 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared\components\modals>
+------------------------------
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared\components\modals> cd ../..
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared> ng g s shared --skip-tests
+CREATE src/app/shared/shared.service.ts (135 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared> 
+
+-----------------------------------------------------------
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> cd src/app/play
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\play> ng g s play --skip-tests
+CREATE src/app/play/play.service.ts (133 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\play> 
+
+-----------------------------------------------------------
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\play> cd ..
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app> cd shared
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared> cd .\guards\
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared\guards> ng g guard authorization --skip-tests
+? Which type of guard would you like to create? (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)    
+>(*) CanActivate
+ ( ) CanActivateChild
+ ( ) CanDeactivate
+ ( ) CanLoad
+ ( ) CanMatch
+click sur CanActivate
+? Which type of guard would you like to create? CanActivate
+CREATE src/app/shared/guards/authorization.guard.ts (466 bytes)
+-----------------------------------------------------------
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared\guards> cd ..
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared> cd .\interceptors\
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared\interceptors> ng g interceptor jwt --skip-tests
+CREATE src/app/shared/interceptors/jwt.interceptor.ts (408 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared\interceptors>
+-----------------------------------------------------------
+
+API Key:
+46f7a42229b5392a68e176b07d558933
+
+Secret Key:
+d7cd51d737b28a442ac41ed20fea0a97
+
+-----------------------------------------------------------
+
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> cd .\src\app\account\
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\account> ng g c confirm-email --skip-tests
+CREATE src/app/account/confirm-email/confirm-email.component.html (28 bytes)
+CREATE src/app/account/confirm-email/confirm-email.component.ts (229 bytes)
+CREATE src/app/account/confirm-email/confirm-email.component.css (0 bytes) 
+UPDATE src/app/account/account.module.ts (707 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\account> 
+
+-----------------------------------------------------------
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> cd .\src\app\account\
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\account> ng g c reset-password --skip-tests
+CREATE src/app/account/reset-password/reset-password.component.html (29 bytes)
+CREATE src/app/account/reset-password/reset-password.component.ts (233 bytes)
+CREATE src/app/account/reset-password/reset-password.component.css (0 bytes) 
+UPDATE src/app/account/account.module.ts (915 bytes)

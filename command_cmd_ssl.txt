@@ -1,0 +1,158 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\WINDOWS\system32> Get-ExecutionPolicy
+Unrestricted
+PS C:\WINDOWS\system32> choco
+Chocolatey v1.3.1
+Please run 'choco -?' or 'choco <command> -?' for help menu.
+PS C:\WINDOWS\system32>
+---------------------------------------------------------------
+cmd:
+Microsoft Windows [Version 10.0.19045.4046]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\waelf\source\repos\IdentityApp\ClientApp>cd ssl
+
+C:\Users\waelf\source\repos\IdentityApp\ClientApp\ssl>choco install mkcert
+Chocolatey v1.3.1
+Chocolatey detected you are not running from an elevated command shell
+ (cmd/powershell).
+
+ You may experience errors - many functions/packages
+ require admin rights. Only advanced users should run choco w/out an
+ elevated shell. When you open the command shell, you should ensure
+ that you do so with "Run as Administrator" selected. If you are
+ attempting to use Chocolatey in a non-administrator setting, you
+ must select a different location other than the default install
+ location. See
+ https://docs.chocolatey.org/en-us/choco/setup#non-administrative-install
+ for details.
+
+
+ Do you want to continue?([Y]es/[N]o): y
+
+Installing the following packages:
+mkcert
+By installing, you accept licenses for the packages.
+mkcert v1.4.4 already installed.
+ Use --force to reinstall, specify a version to install, or try upgrade.
+
+Chocolatey installed 0/1 packages.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+
+Warnings:
+ - mkcert - mkcert v1.4.4 already installed.
+ Use --force to reinstall, specify a version to install, or try upgrade.
+
+C:\Users\waelf\source\repos\IdentityApp\ClientApp\ssl>mkcert localhost
+Note: the local CA is not installed in the system trust store.
+Note: the local CA is not installed in the Java trust store.
+Run "mkcert -install" for certificates to be trusted automatically ⚠️
+
+Created a new certificate valid for the following names 📜
+ - "localhost"
+
+The certificate is at "./localhost.pem" and the key at "./localhost-key.pem" ✅
+
+It will expire on 28 May 2026 🗓
+
+
+C:\Users\waelf\source\repos\IdentityApp\ClientApp\ssl>
+---------------------------------------------------------------
+
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> ng serve -o
+Node packages may not be installed. Try installing with 'npm install'.
+Error: Could not find the '@angular-devkit/build-angular:dev-server' builder's node package.
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> npm install -g @angular/cli@15                          
+npm WARN deprecated @npmcli/move-file@2.0.1: This functionality has been moved to @npmcli/fs
+
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> npm install
+
+changed 279 packages, and audited 281 packages in 5m
+
+found 0 vulnerabilities  
+---------------------------------------------------------------
+Package Manager Console
+PM> add-migration "addingProviderIntoUserTable"
+Build started...
+Build succeeded.
+To undo this action, use Remove-Migration.
+
+PM> update-database
+Build started...
+Build succeeded.
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (248ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1,214ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1,079ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [MigrationId], [ProductVersion]
+      FROM [__EFMigrationsHistory]
+      ORDER BY [MigrationId];
+Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20240228222419_addingProviderIntoUserTable'.
+Applying migration '20240228222419_addingProviderIntoUserTable'.
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2,095ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      ALTER TABLE [AspNetUsers] ADD [Provider] nvarchar(max) NULL;
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (214ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+      VALUES (N'20240228222419_addingProviderIntoUserTable', N'7.0.4');
+Done.
+PM>
+------------------------------------------------------------------------------------
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> npm install @types/google-one-tap
+
+added 1 package, removed 1 package, and audited 974 packages in 1m
+
+111 packages are looking for funding
+  run `npm fund` for details
+
+1 moderate severity vulnerability
+
+To address all issues, run:      
+  npm audit fix
+
+Run `npm audit` for details.     
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> 
+
+----
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> npm install jwt-decode
+npm WARN cleanup Failed to remove some directories [
+npm WARN cleanup   [
+npm WARN cleanup     'C:\\Users\\waelf\\source\\repos\\IdentityApp\\ClientApp\\node_modules\\node-gyp-build',
+npm WARN cleanup     [Error: EPERM: operation not permitted, unlink 'C:\Users\waelf\source\repos\IdentityApp\ClientApp\node_modules\node-gyp-build\package.json'] {
+npm WARN cleanup       errno: -4048,
+npm WARN cleanup       code: 'EPERM',
+npm WARN cleanup       syscall: 'unlink',
+npm WARN cleanup       path: 'C:\\Users\\waelf\\source\\repos\\IdentityApp\\ClientApp\\node_modules\\node-gyp-build\\package.json'
+npm WARN cleanup     }
+npm WARN cleanup   ]
+npm WARN cleanup ]
+
+added 1 package, and audited 975 packages in 19s
+
+111 packages are looking for funding
+  run `npm fund` for details
+
+1 moderate severity vulnerability
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> 
+

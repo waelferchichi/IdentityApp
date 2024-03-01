@@ -1,0 +1,224 @@
+click cmd run administrateur
+Microsoft Windows [Version 10.0.19045.3996]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\WINDOWS\system32>nvm list
+
+    18.17.0
+    18.16.1
+    18.16.0
+    14.18.3
+
+C:\WINDOWS\system32>nvm install 18.10.0
+Downloading node.js version 18.10.0 (64-bit)...
+Extracting node and npm...
+Complete
+npm v8.19.2 installed successfully.
+
+
+Installation complete. If you want to use this version, type
+
+nvm use 18.10.0
+
+C:\WINDOWS\system32>
+
+--------------------
+If you are still encountering issues with nvm version switching, you might want to double-check the environment variables to ensure everything is configured correctly. Here are the steps:
+
+    Check PATH Variable:
+        Open a new Command Prompt.
+        Run the following command to check the PATH variable:
+
+        bash
+
+    echo %PATH%
+
+    Make sure that the path to the nvm installation directory is listed before any other directories that might contain Node.js binaries. The nvm directory usually looks like C:\Users\<YourUserName>\AppData\Roaming\nvm.
+<YourUserName>=waelf
+C:\Users\waelf\AppData\Roaming\nvm
+Check NVM_SYMLINK Variable:
+
+    Run the following command to check the NVM_SYMLINK variable:
+
+    bash
+
+    echo %NVM_SYMLINK%
+
+    It should point to the current Node.js version.
+
+Check NVM_HOME Variable:
+
+    Run the following command to check the NVM_HOME variable:
+
+    bash
+
+    echo %NVM_HOME%
+
+    It should point to the directory where nvm is installed.
+
+Check NVM Use Command:
+
+    Ensure that you are using the correct nvm use command and specifying the version correctly:
+
+    bash
+
+    nvm use 18.10.0
+
+Restart the Terminal:
+
+    Close your current Command Prompt or terminal session and open a new one. This ensures that any changes made to environment variables take effect.
+
+Manual Node Version Switching:
+
+    As a workaround, you can manually switch to the desired Node.js version by updating the PATH variable. For example:
+
+    bash
+
+        set PATH=C:\Users\waelf\AppData\Roaming\nvm\v18.10.0;%PATH%
+
+After checking and adjusting the environment variables, try running node --version again to verify if the version switching has been successful. If the issue persists, there might be an underlying problem with the nvm installation, and you may need to reinstall nvm.
+
+------------------------------------
+Microsoft Windows [Version 10.0.19045.3996]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\waelf>echo %NVM_SYMLINK%
+C:\Program Files\nodejs
+
+C:\Users\waelf>echo %NVM_HOME%
+C:\Users\waelf\AppData\Roaming\nvm
+
+C:\Users\waelf>nvm use 18.10.0
+Now using node v18.10.0 (64-bit)
+
+C:\Users\waelf>set PATH=C:\Users\waelf\AppData\Roaming\nvm\v18.10.0;%PATH%
+
+C:\Users\waelf>nvm list
+
+    18.17.1
+    18.16.1
+    18.16.0
+  * 18.10.0 (Currently using 64-bit executable)
+    14.18.3
+
+C:\Users\waelf>node -v
+v18.10.0
+
+C:\Users\waelf>node --version
+v18.10.0
+
+C:\Users\waelf>
+----------------------------------
+
+installation angular/cli@15
+Microsoft Windows [Version 10.0.19045.3996]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\WINDOWS\system32>ng versionng version
+'ng' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\WINDOWS\system32>ng version
+'ng' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\WINDOWS\system32>node --version
+v18.10.0
+
+C:\WINDOWS\system32>npm --version
+8.19.2
+
+C:\WINDOWS\system32>ng
+'ng' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\WINDOWS\system32>npm install -g @angular/cli@15
+npm WARN deprecated @npmcli/move-file@2.0.1: This functionality has been moved to @npmcli/fs
+
+added 277 packages, and audited 279 packages in 3m
+
+found 0 vulnerabilities
+npm notice
+npm notice New major version of npm available! 8.19.2 -> 10.4.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.4.0
+npm notice Run npm install -g npm@10.4.0 to update!
+npm notice
+
+C:\WINDOWS\system32>ng version
+? Would you like to share pseudonymous usage data about this project with the Angular Team
+at Google under Google's Privacy Policy at https://policies.google.com/privacy. For more
+details and how to change this setting, see https://angular.io/analytics. Yes
+
+Thank you for sharing pseudonymous usage data. Should you change your mind, the following
+command will disable this feature entirely:
+
+    ng analytics disable --global
+
+Global setting: enabled
+Local setting: No local workspace configuration file.
+Effective status: enabled
+
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+
+
+Angular CLI: 15.2.10
+Node: 18.10.0
+Package Manager: npm 8.19.2
+OS: win32 x64
+
+Angular:
+...
+
+Package                      Version
+------------------------------------------------------
+@angular-devkit/architect    0.1502.10 (cli-only)
+@angular-devkit/core         15.2.10 (cli-only)
+@angular-devkit/schematics   15.2.10 (cli-only)
+@schematics/angular          15.2.10 (cli-only)
+
+
+C:\WINDOWS\system32>
+
+-----------------------------------------------------------------------------------
+Microsoft Windows [Version 10.0.19045.3996]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\WINDOWS\system32>cd C:\Users\waelf\source\repos\IdentityApp
+
+C:\Users\waelf\source\repos\IdentityApp>ng new ClientApp
+? Would you like to add Angular routing? Yes
+? Which stylesheet format would you like to use? CSS
+CREATE ClientApp/angular.json (2716 bytes)
+CREATE ClientApp/package.json (1043 bytes)
+CREATE ClientApp/README.md (1064 bytes)
+CREATE ClientApp/tsconfig.json (901 bytes)
+CREATE ClientApp/.editorconfig (274 bytes)
+CREATE ClientApp/.gitignore (548 bytes)
+CREATE ClientApp/tsconfig.app.json (263 bytes)
+CREATE ClientApp/tsconfig.spec.json (273 bytes)
+CREATE ClientApp/.vscode/extensions.json (130 bytes)
+CREATE ClientApp/.vscode/launch.json (470 bytes)
+CREATE ClientApp/.vscode/tasks.json (938 bytes)
+CREATE ClientApp/src/favicon.ico (948 bytes)
+CREATE ClientApp/src/index.html (295 bytes)
+CREATE ClientApp/src/main.ts (214 bytes)
+CREATE ClientApp/src/styles.css (80 bytes)
+CREATE ClientApp/src/assets/.gitkeep (0 bytes)
+CREATE ClientApp/src/app/app-routing.module.ts (245 bytes)
+CREATE ClientApp/src/app/app.module.ts (393 bytes)
+CREATE ClientApp/src/app/app.component.html (23115 bytes)
+CREATE ClientApp/src/app/app.component.spec.ts (1082 bytes)
+CREATE ClientApp/src/app/app.component.ts (213 bytes)
+CREATE ClientApp/src/app/app.component.css (0 bytes)
+√ Packages installed successfully.
+    Directory is already under version control. Skipping initialization of git.
+
+C:\Users\waelf\source\repos\IdentityApp>cd ClientApp
+
+C:\Users\waelf\source\repos\IdentityApp\ClientApp>code .
+-----------------------------------------------------------------------------------
