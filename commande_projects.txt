@@ -251,3 +251,186 @@ pm.globals.set('jwt',user.jwt);
   "ApiKey": "46f7a42229b5392a68e176b07d558933",
   "SecretKey": "d7cd51d737b28a442ac41ed20fea0a97"
 }
+-------------------------------------------------------------------------
+dossiers Admin:
+
+Identity App / Admin/Get Members
+Get
+{{url}}/api/admin/get-members
+Authorization 
+Type: Bearer Token
+Token : {{jwt}}
+
+Status: 200 Ok
+[
+    {
+        "id": "3d517519-5caf-4743-a692-9b44457e05c0",
+        "userName": "player@example.com",
+        "firstName": "player",
+        "lastName": "miller",
+        "isLocked": false,
+        "dateCreated": "2024-03-01T20:00:21.8425126",
+        "roles": [
+            "Player"
+        ]
+    },
+    {
+        "id": "9d5c90de-bdb3-4e57-a852-9fd123f26161",
+        "userName": "122107839014206971",
+        "firstName": "mark",
+        "lastName": "jackson",
+        "isLocked": false,
+        "dateCreated": "2024-03-03T19:00:59.8018855",
+        "roles": []
+    },
+    {
+        "id": "d38bcc8d-4087-4a9f-8d84-6f44041a521c",
+        "userName": "111345650910671252255",
+        "firstName": "ben ",
+        "lastName": "mark",
+        "isLocked": false,
+        "dateCreated": "2024-03-03T19:05:14.3030899",
+        "roles": []
+    },
+    {
+        "id": "ebfcd8be-83db-4960-a0f7-fa2c5609279e",
+        "userName": "manager@example.com",
+        "firstName": "manager",
+        "lastName": "wilson",
+        "isLocked": false,
+        "dateCreated": "2024-03-01T20:00:21.5654103",
+        "roles": [
+            "Manager"
+        ]
+    },
+    {
+        "id": "f31d7323-263c-421e-8aaf-2d5c8d3d7f1a",
+        "userName": "jacob",
+        "firstName": "jacob",
+        "lastName": "hamilton",
+        "isLocked": false,
+        "dateCreated": "2024-03-07T18:10:51.8102156",
+        "roles": [
+            "Admin",
+            "Player"
+        ]
+    }
+]
+
+--------------------------------------------------------------------------
+
+Identity App / Admin/Get Members/ {id}
+Get
+{{url}}/api/admin/get-member/3d517519-5caf-4743-a692-9b44457e05c0
+Authorization 
+Type: Bearer Token
+Token : {{jwt}}
+
+Status: 200 Ok
+{
+    "id": "3d517519-5caf-4743-a692-9b44457e05c0",
+    "userName": "player@example.com",
+    "firstName": "player",
+    "lastName": "miller",
+    "password": null,
+    "roles": "Player"
+}
+
+--------------------------------------------------------------------------
+Identity App / Admin/Add Edit Member
+Post
+{{url}}/api/admin/add-edit-member
+Authorization 
+Type: Bearer Token
+Token : {{jwt}}
+Body --> raw --> json
+Status: 204 No Content
+{
+    "id": "",
+    "userName" : "jacob",
+    "firstName" : "jacob",
+    "lastName": "hamilton",
+    "password": "123456",
+    "roles": "Admin,Player"
+}
+--------------------------------------------------------------------------
+Identity App / Admin/Get Application Roles
+Get 
+{{url}}/api/admin/get-application-roles
+Authorization 
+Type: Bearer Token
+Token : {{jwt}}
+Status: 200 Ok
+[
+    "Manager",
+    "Admin",
+    "Player"
+]
+--------------------------------------------------------------------------
+
+Identity App / Admin/Lock Member/ {id}
+Put
+{{url}}/api/admin/lock-member/a0338fa1-cd3f-4a6c-8913-23555c1d0bf7
+Authorization 
+Type: Bearer Token
+Token : {{jwt}}
+Status: 204 No Content
+--------------------------------------------------------------------------
+Identity App / Admin/Unlock Member/ {id}
+Put
+{{url}}/api/admin/unlock-member/a0338fa1-cd3f-4a6c-8913-23555c1d0bf7
+Authorization 
+Type: Bearer Token
+Token : {{jwt}}
+Status: 204 No Content
+--------------------------------------------------------------------------
+Identity App / Admin/Delete Member /{id}
+Delete
+{{url}}/api/admin/delete-member/a0338fa1-cd3f-4a6c-8913-23555c1d0bf7
+Authorization 
+Type: Bearer Token
+Token : {{jwt}}
+Status: 204 No Content
+--------------------------------------------------------------------------
+-->Dossiers Identity App
+-->Dossiers Account
+Identity App / Account / login
+Post
+{{url}}/api/account/login
+Tests:
+const user = pm.response.json();
+pm.globals.set('jwt',user.jwt);
+Body:
+{
+    "username":"jacob",
+    "password":"123456"
+}
+Status: 200 OK
+{
+    "firstName": "jacob",
+    "lastName": "hamilton",
+    "jwt": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMzFkNzMyMy0yNjNjLTQyMWUtOGFhZi0yZDVjOGQzZDdmMWEiLCJlbWFpbCI6ImphY29iIiwiZ2l2ZW5fbmFtZSI6ImphY29iIiwiZmFtaWx5X25hbWUiOiJoYW1pbHRvbiIsInJvbGUiOlsiQWRtaW4iLCJQbGF5ZXIiXSwibmJmIjoxNzA5ODM1MjQ3LCJleHAiOjE3MTExMzEyNDcsImlhdCI6MTcwOTgzNTI0NywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MTg5In0.mBtprtUAd8cjyukh5wk5KdX9h9cOpMJsOlV7W6LpFNhwtze_zlGXsaq26F2DusUIuU2dZjEGHLGCzpg_LL9RKQ"
+}
+
+-------------------------------------------------------------------------------------
+
+-->Dossiers Identity App
+-->Dossiers Account
+Identity App / Account / login
+Post
+{{url}}/api/account/login
+Tests:
+const user = pm.response.json();
+pm.globals.set('jwt',user.jwt);
+Body:
+{
+    "username":"manager",
+    "password":"888888"
+}
+Status: 200 OK
+
+{
+    "firstName": "test",
+    "lastName": "test2",
+    "jwt": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlYmZjZDhiZS04M2RiLTQ5NjAtYTBmNy1mYTJjNTYwOTI3OWUiLCJlbWFpbCI6Im1hbmFnZXIiLCJnaXZlbl9uYW1lIjoidGVzdCIsImZhbWlseV9uYW1lIjoidGVzdDIiLCJyb2xlIjpbIkFkbWluIiwiUGxheWVyIl0sIm5iZiI6MTcwOTg0NTc4NywiZXhwIjoxNzExMTQxNzg3LCJpYXQiOjE3MDk4NDU3ODcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTE4OSJ9.AKTXShSTskBtflHIUnwlRh1MZe5RPc1Q46rh9NvKtpiwu2WXXIE89Ey9Dv57ENZUCzHY6wPKSgCMVhbIMrG-Vw"
+}

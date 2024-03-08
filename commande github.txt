@@ -13,7 +13,8 @@ git remote add origin https://github.com/waelferchichi/IdentityApp1.git
 git push -u origin main
 
 …or push an existing repository from the command line
-
+git remote set-url origin https://github.com/waelferchichi/IdentityApp.git
+git commit -m "Section 08, Authorization with User Roles, Policy and Claims"
 git remote add origin https://github.com/waelferchichi/IdentityApp1.git
 git branch -M main
 git push -u origin main
@@ -21,3 +22,17 @@ git push -u origin main
 …or import code from another repository
 
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+
+
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
+
+
+
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
