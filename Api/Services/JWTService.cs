@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -53,5 +54,21 @@ namespace Api.Services
             var jwt = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(jwt);
         }
+
+        //public RefreshToken CreateRefreshToken(User user)
+        //{
+        //    var token = new byte[32];
+        //    using var randomNumberGenerator = RandomNumberGenerator.Create();
+        //    randomNumberGenerator.GetBytes(token);
+
+        //    var refreshToken = new RefreshToken()
+        //    {
+        //        Token = Convert.ToBase64String(token),
+        //        User = user,
+        //        DateExpiresUtc = DateTime.UtcNow.AddDays(int.Parse(_config["JWT:RefreshTokenExpiresInDays"]))
+        //    };
+
+        //    return refreshToken;
+        //}
     }
 }

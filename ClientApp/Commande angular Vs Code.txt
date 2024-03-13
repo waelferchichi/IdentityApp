@@ -273,3 +273,20 @@ CREATE src/app/account/reset-password/reset-password.component.html (29 bytes)
 CREATE src/app/account/reset-password/reset-password.component.ts (233 bytes)
 CREATE src/app/account/reset-password/reset-password.component.css (0 bytes) 
 UPDATE src/app/account/account.module.ts (915 bytes)
+
+------------------------------------------------------------------------------------------------
+
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> cd src/app
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app> ng g m admin
+CREATE src/app/admin/admin.module.ts (191 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app> cd admin
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\admin> ng g m admin-routing --flat
+CREATE src/app/admin/admin-routing.module.ts (198 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\admin> ng g s admin --skip-tests --flat
+CREATE src/app/admin/admin.service.ts (134 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\admin> ng g c admin --skip-tests --flat
+CREATE src/app/admin/admin.component.html (20 bytes)
+CREATE src/app/admin/admin.component.ts (198 bytes)
+CREATE src/app/admin/admin.component.css (0 bytes) 
+UPDATE src/app/admin/admin.module.ts (265 bytes)   
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\admin> 

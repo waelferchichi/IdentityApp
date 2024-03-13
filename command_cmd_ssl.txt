@@ -156,3 +156,49 @@ To address all issues, run:
 Run `npm audit` for details.
 PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> cd src/app
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app> ng g m admin
+CREATE src/app/admin/admin.module.ts (191 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app> cd admin
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\admin> ng g m admin-routing --flat
+CREATE src/app/admin/admin-routing.module.ts (198 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\admin> ng g s admin --skip-tests --flat
+CREATE src/app/admin/admin.service.ts (134 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\admin> ng g c admin --skip-tests --flat
+CREATE src/app/admin/admin.component.html (20 bytes)
+CREATE src/app/admin/admin.component.ts (198 bytes)
+CREATE src/app/admin/admin.component.css (0 bytes) 
+UPDATE src/app/admin/admin.module.ts (265 bytes)   
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\admin> 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> cd src\app\shared\directives
+//cree dossiers : directives (IdentityApp\ClientApp\src\app\shared\directives)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared> mkdir directives
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared> cd directives
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared\directives> ng g d user-has-role --skip-tests --flat
+CREATE src/app/shared/directives/user-has-role.directive.ts (151 bytes)
+UPDATE src/app/shared/shared.module.ts (1096 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared\directives> 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared\directives> cd ../
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared> cd .\guards\
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared\guards> ng g guard admin --skip-tests --flat
+? Which type of guard would you like to create? CanActivate
+CREATE src/app/shared/guards/admin.guard.ts (458 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared\guards>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared\guards> cd ..
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\shared> cd ..\..\..
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> cd .\src\app\admin\
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\admin> ng g c add-edit-member --skip-tests
+CREATE src/app/admin/add-edit-member/add-edit-member.component.html (30 bytes)
+CREATE src/app/admin/add-edit-member/add-edit-member.component.ts (236 bytes)
+CREATE src/app/admin/add-edit-member/add-edit-member.component.css (0 bytes)
+UPDATE src/app/admin/admin.module.ts (464 bytes)
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp\src\app\admin>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PS C:\Users\waelf\source\repos\IdentityApp\ClientApp> ng serve -o

@@ -7,9 +7,17 @@ import { AccountService } from '../account/account.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+
+  collapsed = true;
+
   constructor(public accountService: AccountService){}
 
   logout(){
     this.accountService.logout(); 
   }
+
+  toggleCollapsed() {
+    this.collapsed = !this.collapsed;
+  }
+  
 }
